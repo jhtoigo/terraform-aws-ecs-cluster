@@ -28,8 +28,8 @@ resource "aws_ecs_cluster_capacity_providers" "ecs_cluster_provider" {
   capacity_providers = ["FARGATE", "FARGATE_SPOT"]
 
   default_capacity_provider_strategy {
-    base              = 20
-    weight            = 50
+    weight            = 100
+    base              = 0
     capacity_provider = "FARGATE"
   }
 }
