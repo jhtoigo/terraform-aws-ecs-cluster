@@ -1,5 +1,5 @@
 resource "aws_ssm_parameter" "cluster_name" {
-  name  = format("/%s/ecs-cluster/%s", var.project_name, var.ecs_cluster_name)
+  name  = format("/%s/ecs-cluster/%s/name", var.project_name, var.ecs_cluster_name)
   value = aws_ecs_cluster.ecs_cluster.name
   type  = "String"
   tags  = var.resource_tags
